@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  font-size: calc(0.5em + 1vw);
+}
+
+body {
+  background: lightgrey;
+}
+
+.note {
+  background-color: white;
+  padding: 1vmin;
+  margin: 1vmin auto;
+  text-align: center;
+  width: 90%;
+  border-radius: 0.5em;
+}
