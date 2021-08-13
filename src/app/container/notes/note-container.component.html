@@ -1,5 +1,1 @@
-<h3>All notes</h3>
-
-<ul>
-  <li *ngFor="let note of notes">{{note.content}} ({{note.createdAt.toDateString()}} {{note.createdAt.toLocaleTimeString()}})</li>
-</ul>
+<app-note-list [notes]="notes"></app-note-list>
