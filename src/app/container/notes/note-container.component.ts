@@ -4,9 +4,9 @@ import {NoteDto} from '../../model/note-dto';
 
 @Component({
   selector: 'app-notes-container',
-  templateUrl: 'notes-container.component.html'
+  templateUrl: 'note-container.component.html'
 })
-export class NotesContainerComponent implements OnInit {
+export class NoteContainerComponent implements OnInit {
 
   notes: NoteDto[] = [];
 
