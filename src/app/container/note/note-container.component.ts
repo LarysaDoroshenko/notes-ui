@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {NoteService} from '../../service/note-service';
 import {NoteDto} from '../../model/note-dto';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-notes-container',
@@ -8,12 +9,13 @@ import {NoteDto} from '../../model/note-dto';
 })
 export class NoteContainerComponent implements OnInit {
 
-  notes: NoteDto[] = [];
+  notes: Observable<NoteDto[]>;
 
   constructor(private noteService: NoteService) {
   }
 
   ngOnInit(): void {
+    this.noteService.loadNotes();
     this.notes = this.noteService.getNotes();
   }
 
